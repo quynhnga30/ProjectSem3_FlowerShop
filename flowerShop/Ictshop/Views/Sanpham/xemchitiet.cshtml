@@ -1,0 +1,29 @@
+﻿@using Ictshop.Models
+@model Sanpham
+
+
+@{
+    ViewBag.Title = "xemchitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<br />
+
+<CENTER>
+    <div>
+        <h2>Product Detail </h2>
+        <img src="@Url.Content("~" +@Model.Anhbia)" />
+        <br />
+        <h3> @Model.Tensp</h3>
+        <h3 style="color:red">Price : @String.Format("{0:0,0}", @Model.Giatien) $</h3>
+        <br />
+        @Model.Mota
+        <br />
+        @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = Model.Masp, @strURL = Request.Url.ToString() }))
+        {
+            <input type="submit" value="Order " id="bgnGioHang" />
+
+        }
+
+    </div>
+</CENTER>
