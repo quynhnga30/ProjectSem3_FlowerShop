@@ -1,0 +1,33 @@
+﻿
+<div class="row">
+    <div style="background-color: #dc359217 !important "><h3 style="padding-left:20px"> ValentineDay  </h3></div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-sm-6">
+            <a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">
+                <img src="~/HinhanhSP//p1.jpg" class="img-responsive" alt="" width="400" height="400" />
+            </a>
+            <center>
+                <h3>Rose Flower </h3>
+                <h3 style="color:red">Price: 10$ </h3>
+                <br />
+                @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = item.Masp, @strURL = Request.Url.ToString() }))
+                {
+                    <input type="submit" value="Order" id="bgnGioHang" />
+
+                }
+                @*<a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">Xem chi tiết</a>*@
+            </center>
+
+        </div>
+    }
+    @*<div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/p1.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/p1.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <img src="~/HinhanhSP/p1.jpg" class="img-responsive" alt="" />
+        </div>*@
+</div>

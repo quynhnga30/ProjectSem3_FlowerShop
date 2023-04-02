@@ -1,0 +1,96 @@
+﻿@model PagedList.IPagedList<Ictshop.Models.Sanpham>
+
+@using PagedList.Mvc;
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Management</h2>
+
+<p>
+    <button class="btn-default" style="color:white">@Html.ActionLink("Create Product", "Create")</button>
+</p>
+<table class="table table-bordered">
+    <tr>
+
+        <th>
+            Product Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Description
+        </th>
+        
+        <th>
+            Img
+        </th>
+        <th>
+            Occasion
+        </th>
+        <th>
+            Flower
+        </th>
+        <th> 
+            Action
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Tensp)
+    </td>
+    <td>
+        @String.Format("{0:0,0}", item.Giatien) Dollar / $
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soluong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mota)
+    </td>
+
+    <td>
+        <img src="@Url.Content("~" +item.Anhbia)" width="50" height="50" />
+        @*@Html.DisplayFor(modelItem => item.Anhbia)*@
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hangsanxuat.Tenhang)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hedieuhanh.Tenhdh)
+    </td>
+    <td>
+        <button class="btn btn-success">
+            @Html.ActionLink("Edit", "Edit", new { id = item.Masp }, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-primary">
+            @Html.ActionLink("Details", "Details", new { id = item.Masp }, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-danger">
+            @Html.ActionLink("Delete", "Delete", new { id = item.Masp }, new { @style = "color:white;" })
+        </button>
+    </td>
+</tr>
+    }
+
+</table>
+<!-- Thêm mã phân trang -->
+<br />
+
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+        new { page }))
+
+<!-- Kết thúc -->
