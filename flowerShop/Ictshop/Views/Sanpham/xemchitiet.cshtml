@@ -1,0 +1,114 @@
+﻿@using Ictshop.Models
+@model Sanpham
+
+
+@{
+    ViewBag.Title = "xemchitiet";
+    Layout = "~/Views/Shared/layout.cshtml";
+
+}
+<br />
+
+<CENTER>
+    <div>
+        <h2>Product Detail </h2>
+        <img src="@Url.Content("~" + @Model.Anhbia)" />
+        <br />
+        <h3> @Model.Tensp</h3>
+        <h3 style="color:red">Price : @String.Format("{0:0,0}", @Model.Giatien) $</h3>
+        <br />
+        <b>@Model.Mota</b>
+        <br />
+        <br />
+        <br />
+        @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = @Model.Masp, @strURL = Request.Url.ToString() }))
+        {
+            <input style="background-color:cornsilk;border-radius:5px; margin: 10px 10px 10px 10px;font-size:12px" type="submit" value="Order " id="bgnGioHang" />
+
+        }
+
+    </div>
+</CENTER>
+
+
+
+    
+<div >
+    <div class="row hedding m-0 pl-3 pt-0 pb-3">
+        <h2>Product Detail </h2>
+    </div>
+    <div class="row m-0">
+        <div class="col-lg-4 left-side-product-box pb-3">
+            <img src="@Url.Content("~" + @Model.Anhbia)" class="border p-3">
+            @*<span class="sub-img">
+                    <img  class="border p-2">
+                    <img  class="border p-2">
+                    <img  class="border p-2">
+                </span>*@
+        </div>
+        <div class="col-lg-8">
+            <div class="right-side-pro-detail border p-1 m-0">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <p class="m-0 p-0"><h3>Product Name: @Model.Tensp</h3></p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="m-0 p-0 price-pro">
+                            <h3 style="color:red">Price : @String.Format("{0:0,0}", @Model.Giatien) $</h3>
+                        </p>
+                        <hr class="p-0 m-0">
+                    </div>
+                    <div class="col-lg-12 pt-2">
+                        <h5>Discription</h5>
+                        <span>
+                            <b>@Model.Mota</b>
+                        </span>
+
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="tag-section"><strong>Tag : </strong><a href="">Woman</a><a href="">,Man</a></p>
+                    </div>
+
+                    <div class="col-lg-12 mt-3">
+                        <div class="row">
+                            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = @Model.Masp, @strURL = Request.Url.ToString() }))
+                            {
+                                <input style="background-color:cornsilk;border-radius:5px; margin: 10px 10px 10px 10px;font-size:12px" type="submit" value="Order " id="bgnGioHang" />
+
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+    @*<div class="row">
+        <div class="col-lg-12 text-center pt-3">
+            <h4>More Product</h4>
+        </div>
+    </div>
+    <div class="row mt-3 p-0 text-center pro-box-section">
+        <div class="col-lg-3 pb-2">
+            <div class="pro-box border p-0 m-0">
+                <img src="">
+            </div>
+        </div>
+        <div class="col-lg-3 pb-2">
+            <div class="pro-box border p-0 m-0">
+                <img src="">
+            </div>
+        </div>
+        <div class="col-lg-3 pb-2">
+            <div class="pro-box border p-0 m-0">
+                <img src="">
+            </div>
+        </div>
+        <div class="col-lg-3 pb-2">
+            <div class="pro-box border p-0 m-0">
+                <img src="">
+            </div>
+        </div>
+    </div>*@

@@ -1,0 +1,88 @@
+﻿@using Ictshop.Models;
+@model List<GioHang>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/layout.cshtml";
+}
+
+<section class="vh-80" style="background-color: #fdccbc;">
+    <div class="container h-80">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <h2 class="">  Update Cart   <i class="fa fa-shopping-cart"></i></h2>
+
+                @foreach (var item in Model)
+                {
+
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+
+                                <div class="row align-items-center  ">
+
+
+
+                                    @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @iMaSP = item.iMasp }))
+                                    {
+                                        <div class="col-md-1">
+
+                                            <img src="@Url.Content("~" + item.sAnhBia)" width="50" height="50" />
+                                        </div>
+
+                                        <div class="col-md-1 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Msp</p>
+                                                <p class="lead fw-normal mb-0">@item.iMasp</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Product Name </p>
+                                                <p class="lead fw-normal mb-0">@item.sTensp</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Price</p>
+                                                <p class="lead fw-normal mb-0">@String.Format("{0:0,0}", item.dDonGia)</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Quantity</p>
+                                                <p class="lead fw-normal mb-0">@Html.TextBox("txtSoLuong", item.iSoLuong)</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Total</p>
+                                                <p class="lead fw-normal mb-0">@String.Format("{0:0,0}", item.ThanhTien) $</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <div>
+                                                <p class="small text-muted mb-4 pb-2">Action</p>
+                                                <input type="submit" value="Update" class="btn-secondary" />
+                                                <button class="btn-success">@Html.ActionLink("Delete", "XoaGioHang", new { @iMaSP = item.iMasp })</button>
+                                            </div>
+                                        </div>
+
+
+                                    }
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                       
+                    }
+
+            
+            </div>
+        </div>  
+
+    </div>
+</section>
