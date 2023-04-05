@@ -215,8 +215,13 @@ namespace Ictshop.Controllers
 
             ViewBag.MaTT = new SelectList(new[]
                 {
+<<<<<<< HEAD
                     new { MaTT = 1, TenPT="Cash Payment" },
                     new { MaTT = 2, TenPT="Tranfer Payment" },
+=======
+                    new { MaTT = 1, TenPT="Thanh toán tiền mặt" },
+                    new { MaTT = 2, TenPT="Thanh toán chuyển khoản" },
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
                 }, "MaTT", "TenPT", 1);
             ViewBag.MaNguoiDung = new SelectList(db.Nguoidungs, "MaNguoiDung", "Hoten");
 

@@ -14,6 +14,7 @@ namespace Ictshop.Areas.Admin.Controllers
     {
         private Qlbanhang db = new Qlbanhang();
 
+<<<<<<< HEAD
         //check authencation
         public ActionResult CheckAuth()
         {
@@ -22,6 +23,8 @@ namespace Ictshop.Areas.Admin.Controllers
             return View();
         }
 
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         // GET: Admin/PhanQuyens
         public ActionResult Index()
         {

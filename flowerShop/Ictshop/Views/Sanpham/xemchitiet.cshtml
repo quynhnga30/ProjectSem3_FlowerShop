@@ -4,7 +4,11 @@
 
 @{
     ViewBag.Title = "xemchitiet";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/layout.cshtml";
+=======
+    Layout = "~/Views/Shared/_Layout.cshtml";
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
 
 }
 <br />
@@ -12,11 +16,16 @@
 <CENTER>
     <div>
         <h2>Product Detail </h2>
+<<<<<<< HEAD
         <img src="@Url.Content("~" + @Model.Anhbia)" />
+=======
+        <img src="@Url.Content("~" +@Model.Anhbia)" />
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         <br />
         <h3> @Model.Tensp</h3>
         <h3 style="color:red">Price : @String.Format("{0:0,0}", @Model.Giatien) $</h3>
         <br />
+<<<<<<< HEAD
         <b>@Model.Mota</b>
         <br />
         <br />
@@ -24,10 +33,18 @@
         @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = @Model.Masp, @strURL = Request.Url.ToString() }))
         {
             <input style="background-color:cornsilk;border-radius:5px; margin: 10px 10px 10px 10px;font-size:12px" type="submit" value="Order " id="bgnGioHang" />
+=======
+        @Model.Mota
+        <br />
+        @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = Model.Masp, @strURL = Request.Url.ToString() }))
+        {
+            <input type="submit" value="Order " id="bgnGioHang" />
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
 
         }
 
     </div>
+<<<<<<< HEAD
 </CENTER>
 
 
@@ -112,3 +129,6 @@
             </div>
         </div>
     </div>*@
+=======
+</CENTER>
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd

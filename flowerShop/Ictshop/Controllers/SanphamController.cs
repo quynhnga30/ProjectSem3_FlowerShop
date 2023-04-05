@@ -10,6 +10,7 @@ namespace Ictshop.Controllers
     public class SanphamController : Controller
     {
         Qlbanhang db = new Qlbanhang();
+<<<<<<< HEAD
         public ActionResult Index(string searchString)
         {
             var links = from l in db.Sanphams
@@ -25,20 +26,34 @@ namespace Ictshop.Controllers
 
         // GET: Sanpham
         public ActionResult womenday()
+=======
+
+        // GET: Sanpham
+        public ActionResult dtiphonepartial()
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         {
             var ip = db.Sanphams.Where(n=>n.Mahang==2).Take(4).ToList();
            return PartialView(ip);
         }
+<<<<<<< HEAD
         public ActionResult motherday()
+=======
+        public ActionResult dtsamsungpartial()
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         {
             var ss = db.Sanphams.Where(n => n.Mahang == 1).Take(4).ToList();
             return PartialView(ss);
         }
+<<<<<<< HEAD
         public ActionResult valentine()
+=======
+        public ActionResult dtxiaomipartial()
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         {
             var mi = db.Sanphams.Where(n => n.Mahang == 3).Take(4).ToList();
             return PartialView(mi);
         }
+<<<<<<< HEAD
 
         public ActionResult listproducts()
         {
@@ -48,6 +63,8 @@ namespace Ictshop.Controllers
         }
    
 
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
         //public ActionResult dttheohang()
         //{
         //    var mi = db.Sanphams.Where(n => n.Mahang == 5).Take(4).ToList();

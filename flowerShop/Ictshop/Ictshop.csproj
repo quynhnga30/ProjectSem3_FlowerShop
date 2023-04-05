@@ -175,7 +175,10 @@
     <Content Include="Areas\Assets\dist\assets\img\error-404-monochrome.svg" />
     <Content Include="Areas\Assets\dist\charts.html" />
     <Content Include="Areas\Assets\dist\css\popuo-box.css" />
+<<<<<<< HEAD
     <Content Include="HinhanhSP\Tik Tok free vector icons designed by Freepik.png" />
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
     <Content Include="HinhanhSP\icons8-user-50.png" />
     <Content Include="Areas\Assets\dist\css\styles.css" />
     <Content Include="Areas\Assets\dist\index.html" />
@@ -1278,13 +1281,17 @@
     <Content Include="HinhanhSP\team-1.jpg" />
     <Content Include="HinhanhSP\team-2.jpg" />
     <Content Include="HinhanhSP\team-3.jpg" />
+<<<<<<< HEAD
     <Content Include="HinhanhSP\userogjbdsfj.jpg" />
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
     <Content Include="Images\files\avt2.jpg" />
     <Content Include="Images\files\avt3.jpg" />
     <Content Include="Images\files\avt4.jpg" />
     <Content Include="Images\files\p1.jpg" />
     <Content Include="Images\files\p2.jpg" />
     <Content Include="Images\files\p3.jpg" />
+<<<<<<< HEAD
     <Content Include="Images\files\p4.jpg" />
     <Content Include="Images\files\p5.jpg" />
     <Content Include="Images\files\p6.jpg" />
@@ -1292,6 +1299,8 @@
     <Content Include="Images\files\p8.jpg" />
     <Content Include="Images\files\p9.jpg" />
     <Content Include="Images\files\p10.jpg" />
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
     <Content Include="Images\_thumbs\Files\mc.png" />
     <Content Include="Images\_thumbs\Files\qtchannuoi.png" />
     <Content Include="Images\_thumbs\Files\qtchebien1.png" />
@@ -1435,11 +1444,19 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Sanpham\valentine.cshtml" />
     <Content Include="Views\Sanpham\motherday.cshtml" />
     <Content Include="Views\Danhmuc\DanhmucPartial.cshtml" />
     <Content Include="Views\Home\SlidePartial.cshtml" />
     <Content Include="Views\Sanpham\womenday.cshtml" />
+=======
+    <Content Include="Views\Sanpham\dtiphonePartial.cshtml" />
+    <Content Include="Views\Sanpham\dtsamsungpartial.cshtml" />
+    <Content Include="Views\Danhmuc\DanhmucPartial.cshtml" />
+    <Content Include="Views\Home\SlidePartial.cshtml" />
+    <Content Include="Views\Sanpham\dtxiaomipartial.cshtml" />
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
     <Content Include="Views\Sanpham\xemchitiet.cshtml" />
     <Content Include="Views\User\Dangky.cshtml" />
     <Content Include="Views\User\Dangnhap.cshtml" />
@@ -1457,7 +1474,10 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\GioHang\ThanhToanDonHang.cshtml" />
     <Content Include="Views\Shared\layout.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Sanpham\listproducts.cshtml" />
+=======
+>>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
     <None Include="Web.Debug.Config">
       <DependentUpon>Web.Config</DependentUpon>
     </None>
