@@ -24,6 +24,7 @@
 </head>
 <body class="sb-nav-fixed">
     @{ var u = Session["use"] as Ictshop.Models.Nguoidung; }
+    
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-success">
         <h3>@Html.ActionLink("FlowerShop", "Index", "Home", new { @class = "menu1" })</h3>
@@ -57,22 +58,22 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading" style="color:red"> <h5>MENU</h5></div>
+                        <div class="sb-sidenav-menu-heading" style="color:white"> <h3>MENU</h3></div>
                         <div style="padding-left:20px">
                             @*@Html.ActionLink("Sản phẩm", "Index", "Home", new { @style = "color:white;" })*@
 
-                            @Html.ActionLink("Product ", "Index", "Home", null, new { @style = "color:white;" })
+                            @Html.ActionLink("Products ", "Index", "Home", null, new { @style = "color:white;" })
                             @*<a class="nav-link" href="@Url.Action("Index", "Home")"> <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>Sản phẩm</a>*@
 
                         </div>
 
                         <br />
                         <div style="padding-left:20px">
-                            @Html.ActionLink("Occasion", "Index", "Hangsanxuats", null, new { @style = "color:white;" })
+                            @Html.ActionLink("Occasions", "Index", "Hangsanxuats", null, new { @style = "color:white;" })
                         </div>
                         <br />
                         <div style="padding-left:20px">
-                            @Html.ActionLink("Flower ", "Index", "Hedieuhanhs", null, new { @style = "color:white;" })
+                            @Html.ActionLink("Flowers ", "Index", "Hedieuhanhs", null, new { @style = "color:white;" })
                         </div>
                         <br />
                         <div style="padding-left:20px">
@@ -85,13 +86,13 @@
                         <br />
 
                         <div style="padding-left:20px">
-                            @Html.ActionLink("Order ", "Index", "Donhangs", null, new { @style = "color:white;" })
+                            @Html.ActionLink("Orders ", "Index", "Donhangs", null, new { @style = "color:white;" })
                         </div>
 
                         <br />
 
                         <div style="padding-left:20px">
-                            @Html.ActionLink("Statistical", "Index", "Thongkes", null, new { @style = "color:white;" })
+                            @Html.ActionLink("Statisticals", "Index", "Thongkes", null, new { @style = "color:white;" })
                         </div>
 
 

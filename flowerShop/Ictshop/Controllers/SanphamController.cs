@@ -10,23 +10,44 @@ namespace Ictshop.Controllers
     public class SanphamController : Controller
     {
         Qlbanhang db = new Qlbanhang();
+        public ActionResult Index(string searchString)
+        {
+            var links = from l in db.Sanphams
+                        select l;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                links = links.Where(s => s.Tensp.Contains(searchString));
+            }
+
+            return PartialView(links);
+        }
 
         // GET: Sanpham
-        public ActionResult dtiphonepartial()
+        public ActionResult womenday()
         {
             var ip = db.Sanphams.Where(n=>n.Mahang==2).Take(4).ToList();
            return PartialView(ip);
         }
-        public ActionResult dtsamsungpartial()
+        public ActionResult motherday()
         {
             var ss = db.Sanphams.Where(n => n.Mahang == 1).Take(4).ToList();
             return PartialView(ss);
         }
-        public ActionResult dtxiaomipartial()
+        public ActionResult valentine()
         {
             var mi = db.Sanphams.Where(n => n.Mahang == 3).Take(4).ToList();
             return PartialView(mi);
         }
+
+        public ActionResult listproducts()
+        {
+            var list = db.Sanphams.ToList();
+                
+            return PartialView(list);
+        }
+   
+
         //public ActionResult dttheohang()
         //{
         //    var mi = db.Sanphams.Where(n => n.Mahang == 5).Take(4).ToList();

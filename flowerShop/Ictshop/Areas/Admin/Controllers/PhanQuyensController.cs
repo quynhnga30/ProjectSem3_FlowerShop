@@ -14,6 +14,14 @@ namespace Ictshop.Areas.Admin.Controllers
     {
         private Qlbanhang db = new Qlbanhang();
 
+        //check authencation
+        public ActionResult CheckAuth()
+        {
+            var result = db.Nguoidungs.Any(ng => ng.IDQuyen == 1);
+
+            return View();
+        }
+
         // GET: Admin/PhanQuyens
         public ActionResult Index()
         {

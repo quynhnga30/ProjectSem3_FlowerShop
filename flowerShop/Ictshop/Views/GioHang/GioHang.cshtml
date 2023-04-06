@@ -1,6 +1,7 @@
 ﻿@using Ictshop.Models;
 @model List<GioHang>
 
+
 @{
     ViewBag.Title = "GioHang";
     Layout = "~/Views/Shared/layout.cshtml";
@@ -64,10 +65,10 @@
                 </div>
                 <div class="d-flex justify-content-end">
                     <button type="button" class="btn btn-light btn-lg me-2"> @Html.ActionLink("Update ", "SuaGioHang")</button>
-                    <button type="button" class="btn btn-primary btn-lg">
+                    <button type="button"  class="btn btn-primary btn-lg">
                         @using (Html.BeginForm("ThanhToanDonHang", "GioHang", new { @class = "" }))
                         {
-                            <input type="submit" value="Order" class="btn-danger" />
+                            <input type="submit" style="background-color: blue" value="Order"></input>
                         }
                     </button>
 

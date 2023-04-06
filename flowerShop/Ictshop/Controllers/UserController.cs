@@ -24,13 +24,26 @@ namespace Ictshop.Controllers
             try
             {
                 Session["userReg"] = nguoidung;
+                var result = db.Nguoidungs.Any(ng => ng.Email == nguoidung.Email);
+                if (result)
+                {
+                    ViewBag.RegErr = "Register Failer";
+                    return View("Dangky");
+                }
+                else
+                {
+                    // Thêm người dùng  mới
+                    db.Nguoidungs.Add(nguoidung);
+                    // Lưu lại vào cơ sở dữ liệu
+                    db.SaveChanges();
+                    // Nếu dữ liệu đúng thì trả về trang đăng nhập
 
-                // Thêm người dùng  mới
-                db.Nguoidungs.Add(nguoidung);
-                // Lưu lại vào cơ sở dữ liệu
-                db.SaveChanges();
-                // Nếu dữ liệu đúng thì trả về trang đăng nhập
-                if (ModelState.IsValid)
+                    ViewBag.RegOk = "Register Success. Login now !";
+                    return View("Dangnhap");
+                }
+
+
+                /*if (ModelState.IsValid)
                 {
                     //return RedirectToAction("Dangnhap");
                     ViewBag.RegOk = "Register Success. Login now !";
@@ -42,7 +55,7 @@ namespace Ictshop.Controllers
                 {
                     return View("Dangky");
                 }
-
+*/
             }
             catch
             {

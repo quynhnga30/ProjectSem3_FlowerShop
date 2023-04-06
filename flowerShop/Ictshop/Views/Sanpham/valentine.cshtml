@@ -5,15 +5,15 @@
     {
         <div class="col-md-3 col-sm-6">
             <a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">
-                <img src="~/HinhanhSP//p1.jpg" class="img-responsive" alt="" width="400" height="400" />
+                <img src="@Url.Content("~" +@item.Anhbia)" class="img-responsive" alt="" width="400" height="400" />
             </a>
             <center>
-                <h3>Rose Flower </h3>
-                <h3 style="color:red">Price: 10$ </h3>
+                <h3> @item.Tensp </h3>
+                <h3 style="color:red">Price: @String.Format("{0:0,0}", @item.Giatien)$ </h3>
                 <br />
                 @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = item.Masp, @strURL = Request.Url.ToString() }))
                 {
-                    <input type="submit" value="Order" id="bgnGioHang" />
+                    <input style="background-color:cornsilk;border-radius:5px; margin: 10px 10px 10px 10px;font-size:12px" type="submit" value="Order" id="bgnGioHang" />
 
                 }
                 @*<a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">Xem chi tiết</a>*@
