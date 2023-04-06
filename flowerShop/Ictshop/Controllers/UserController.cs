@@ -25,6 +25,9 @@ namespace Ictshop.Controllers
             {
                 Session["userReg"] = nguoidung;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> develop
                 var result = db.Nguoidungs.Any(ng => ng.Email == nguoidung.Email);
                 if (result)
                 {
@@ -38,6 +41,7 @@ namespace Ictshop.Controllers
                     // Lưu lại vào cơ sở dữ liệu
                     db.SaveChanges();
                     // Nếu dữ liệu đúng thì trả về trang đăng nhập
+<<<<<<< HEAD
 
                     ViewBag.RegOk = "Register Success. Login now !";
                     return View("Dangnhap");
@@ -54,6 +58,15 @@ namespace Ictshop.Controllers
                 // Nếu dữ liệu đúng thì trả về trang đăng nhập
                 if (ModelState.IsValid)
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+
+                    ViewBag.RegOk = "Register Success. Login now !";
+                    return View("Dangnhap");
+                }
+
+
+                /*if (ModelState.IsValid)
+>>>>>>> develop
                 {
                     //return RedirectToAction("Dangnhap");
                     ViewBag.RegOk = "Register Success. Login now !";
@@ -66,10 +79,14 @@ namespace Ictshop.Controllers
                     return View("Dangky");
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 */
 =======
 
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+*/
+>>>>>>> develop
             }
             catch
             {

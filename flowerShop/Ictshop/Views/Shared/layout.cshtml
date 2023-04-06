@@ -95,6 +95,9 @@
     @{ var u = Session["use"] as Ictshop.Models.Nguoidung; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 
     <div class="container-fluid bg-dark px-6 d-none d-lg-block">
         <div class="row pt-4 ">
@@ -105,6 +108,7 @@
             <div class="col-sm-8 height">
                 <div class="col-sm-2">
                     <a class="nav-item nav-link active" href="/Home/About"><p style=" font-size: 18px; color:white"><span>About Us</span></p></a>
+<<<<<<< HEAD
                 </div>
                 <div class="col-sm-2">
                     <a class="nav-item nav-link active" href="/SanPham/listproducts"><p style=" font-size: 18px; color:white"> <span>Products</span></p></a>
@@ -162,15 +166,68 @@
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>So 8, Ton That Thuyet, Ha Noi</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+=======
+>>>>>>> develop
                 </div>
+                <div class="col-sm-2">
+                    <a class="nav-item nav-link active" href="/SanPham/listproducts"><p style=" font-size: 18px; color:white"> <span>Products</span></p></a>
+                </div>
+                <div class="col-sm-2">
+                    <a class="nav-item nav-link active" href="/Home/Contact"><p style=" font-size: 18px; color:white"><span>Contact</span></p></a>
+                </div>
+                <div class="col-sm-2">
+                    <a class="nav-item nav-link active" href="@Url.Action("Index", "DonHangs")"><p style=" font-size: 18px; color:white">Order</p></a>
+                </div>
+                <div class="col-sm-2 pt-2">
+                    @Html.Action("GioHangPartial", "GioHang", new { @class = "giohang" })
+                </div>
+
+                <div class="col-sm-2 pt-2">
+                    @*@Html.Action("GioHangPartial", "GioHang",new { @style = "color:while" })*@
+                    @{ if (u != null)
+                        {
+
+                            <ul class="navbar-nav ml-auto ml-md-0">
+                                <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position:absolute; top:-10px">
+                                                            <img style="height:28px;border-radius:50px" src="~/HinhanhSP/userogjbdsfj.jpg" />
+                                                        </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                        <a class="dropdown-item" style="color:red" href="@Url.Action("Details", "Nguoidungs", new { id = u.MaNguoiDung  })"> Hello : @u.Email</a>
+
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/User/DangXuat"> Log out </a>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+
+                        }
+                        else
+                        {
+                            <div>
+                                <a style="font-size:18px;color:white" href="/User/Dangky"> Register</a>&nbsp &nbsp
+                                <a style="font-size:18px; color:white " href="/User/Dangnhap"> Login</a>
+                            </div>
+                        } }
+
+
+                </div>
+
             </div>
+<<<<<<< HEAD
         </div> 
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+        </div>
+>>>>>>> develop
     </div>
     <div class="text-center" style="background-image: url('/HinhanhSP/banner2.jpg'); background-size: cover; max-width: 100%; height: 400px">
         <div class="row mt-auto collapse navbar-collapse navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0" style="font-size: large; position:relative;">
             @*<div class="col-sm-2"><img class="navbar-brand" src="~/HinhanhSP/logo1.jpg" width="20" height="20" style="padding:0" /></div>*@
             <div class="col-sm-1"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -196,78 +253,34 @@
 
 =======
             <div class="col-sm-2" style="font-size:30px"><i class="bi bi-flower1"></i> <a href="/Home">FlowerShop</a></div>
+=======
+>>>>>>> develop
 
-            <div class="col-sm-8 height">
-                <div class="col-sm-2">
-                    <a class="nav-item nav-link active" href="/Home/About" title="dienthoai"><span>About Us</span> </a>
-                </div>
-                <div class="col-sm-2">
-                    <a class="nav-item nav-link active" href="/SanPham/dtxiaomipartial" title="PHUKIEN"><span>Products</span></a>
-                </div>
-                <div class="col-sm-2">
-                    <a class="nav-item nav-link active" href="/Home/Contact" title="LIENHE"><span>Contact</span></a>
-                </div>
-                <div class="col-sm-2">
-                    <a class="nav-item nav-link active" href="@Url.Action("Index", "DonHangs")">Order</a>
-                </div>
-                <div class="col-sm-2">
-                    @Html.Action("GioHangPartial", "GioHang", new { @class = "giohang" })
-                </div>
 
-                <div class="col-sm-2">
-
-                    <div class="col-sm-2">
-                        @*@Html.Action("GioHangPartial", "GioHang",new { @style = "color:while" })*@
-                        @{ if (u != null)
-                            {
-
-                                <ul class="navbar-nav ml-auto ml-md-0">
-                                                            <li class="nav-item dropdown">
-                                                                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position:absolute; top:-10px">
-                                                                    <img style="height:28px" src="~/HinhanhSP/icons8-user-50.png" />
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                                                    <a class="dropdown-item" style="color:red" href="@Url.Action("Details", "Nguoidungs", new { id = u.MaNguoiDung  })"> Xin chào : @u.Email</a>
-
-                                                                    <div class="dropdown-divider"></div>
-                                                                    <a class="dropdown-item" href="/User/DangXuat"> Log out </a>
-                                                                </div>
-                                                            </li>
-                                </ul>
-
-                              
-
-                            }
-                            else
-                            {
-                                <div>
-                                    <a style="color:blue" href="/User/Dangky"> Register</a>&nbsp &nbsp
-                                    <a style="color:blue " href="/User/Dangnhap"> Login</a>
-                                </div>
-                            } }
-                    </div>
-
-                </div>
-
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div>
-                <h3 class="text-white text-uppercase mb-3 animated slideInDown">Beautiful Flower</h3>
-                <h1 class="display-1 text-white mb-md-4 animated zoomIn">Each flower is a soul blooming in the morning light.</h1>
-            </div>
 
 
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+            <h3 class="text-white text-uppercase mb-3 animated slideInDown">Beautiful Flower</h3>
+            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Each flower is a soul blooming in the morning light.</h1>
+        </div>
+
+
     </div>
 
+<<<<<<< HEAD
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+
+>>>>>>> develop
     <br>
 
     <div class="container body-content">

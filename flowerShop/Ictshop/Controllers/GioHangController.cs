@@ -107,6 +107,7 @@ namespace Ictshop.Controllers
                 return RedirectToAction("Index", "Home");
             }
             List<GioHang> lstGioHang = LayGioHang();
+          
             return View(lstGioHang);
         }
         //Tính tổng số lượng và tổng tiền
@@ -114,11 +115,14 @@ namespace Ictshop.Controllers
         private int TongSoLuong()
         {
             int iTongSoLuong = 0;
+
             List<GioHang> lstGioHang = Session["GioHang"] as List<GioHang>;
             if (lstGioHang != null)
             {
                 iTongSoLuong = lstGioHang.Sum(n => n.iSoLuong);
             }
+
+           
             return iTongSoLuong;
         }
         //Tính tổng thành tiền
@@ -216,12 +220,17 @@ namespace Ictshop.Controllers
             ViewBag.MaTT = new SelectList(new[]
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     new { MaTT = 1, TenPT="Cash Payment" },
                     new { MaTT = 2, TenPT="Tranfer Payment" },
 =======
                     new { MaTT = 1, TenPT="Thanh toán tiền mặt" },
                     new { MaTT = 2, TenPT="Thanh toán chuyển khoản" },
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+                    new { MaTT = 1, TenPT="Cash Payment" },
+                    new { MaTT = 2, TenPT="Tranfer Payment" },
+>>>>>>> develop
                 }, "MaTT", "TenPT", 1);
             ViewBag.MaNguoiDung = new SelectList(db.Nguoidungs, "MaNguoiDung", "Hoten");
 
@@ -245,7 +254,6 @@ namespace Ictshop.Controllers
                 decimal thanhtien = item.iSoLuong * (decimal)item.dDonGia;
                 tongtien += thanhtien;
             }
-
             ddh.MaNguoidung = kh.MaNguoiDung;
             ddh.Ngaydat = DateTime.Now;
             Chitietdonhang ctDH = new Chitietdonhang();
