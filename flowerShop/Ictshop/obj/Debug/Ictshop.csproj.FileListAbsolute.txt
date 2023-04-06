@@ -786,6 +786,9 @@ C:\Users\pc\OneDrive\Documents\GitHub\btnhom\flowerShop\Ictshop\obj\Debug\Ictsho
 C:\Users\pc\OneDrive\Documents\GitHub\btnhom\flowerShop\Ictshop\obj\Debug\Ictshop.dll
 C:\Users\pc\OneDrive\Documents\GitHub\btnhom\flowerShop\Ictshop\obj\Debug\Ictshop.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\bin\Ictshop.dll.config
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\bin\Ictshop.dll
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\bin\Ictshop.pdb
@@ -854,5 +857,8 @@ D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\obj\Debug\Ictshop.cspro
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\obj\Debug\Ictshop.csproj.CopyComplete
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\obj\Debug\Ictshop.dll
 D:\projectsem3\ProjectSem3_FlowerShop\flowerShop\Ictshop\obj\Debug\Ictshop.pdb
+<<<<<<< HEAD
 =======
 >>>>>>> 2a759a8020b02aeac8fb7e8a0e59c59926521ecd
+=======
+>>>>>>> develop
