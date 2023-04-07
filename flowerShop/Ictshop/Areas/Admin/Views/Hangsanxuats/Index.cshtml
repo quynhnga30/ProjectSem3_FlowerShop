@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Ictshop.Models.Hangsanxuat>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Occasion Detail  </h2>
+
+<p>
+    @Html.ActionLink("Add Occasion ", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            MSP
+        </th>
+        <th> Occasion 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mahang)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tenhang)
+    </td>
+    <td>
+        <button class="btn btn-success">
+            @Html.ActionLink("Edit ", "Edit", new { id = item.Mahang}, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-primary">
+            @Html.ActionLink("Detail ", "Details", new { id = item.Mahang }, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-danger">
+            @Html.ActionLink("Delete ", "Delete", new { id = item.Mahang }, new { @style = "color:white;" })
+        </button>
+    </td>
+</tr>
+}
+
+</table>

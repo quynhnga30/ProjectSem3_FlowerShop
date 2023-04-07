@@ -1,0 +1,111 @@
+﻿.header {
+ 
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    z-index: 1000;
+    color: #fff;
+    width: 100%;
+    height: 99px;
+    transition: background-color 200ms ease-in-out 0s;
+    -o-transition: background-color 200ms ease-in-out 0s;
+    -moz-transition: background-color 200ms ease-in-out 0s;
+    -webkit-transition: background-color 200ms ease-in-out 0s;
+
+}
+.header-inner {
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+.p-0 {
+    padding: 0 !important;
+}
+.navbar-expand-lg {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.logo {
+    float: left;
+    text-align: left;
+    display: inline-block;
+}
+.logo a {
+        max-width: 100%;
+        margin-top: 10px;
+        transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+        -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+        -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+        -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+        position: relative;
+    }
+.header .logo a img.logo-light {
+    opacity: 1;
+}
+.logo a img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+    -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+    -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+    -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+}
+.navbar-toggler {
+    outline: none !important;
+}
+.p-0 {
+    padding: 0 !important;
+}
+#icon-toggler {
+    width: 20px;
+    height: 21px;
+    position: relative;
+    margin: 23px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: block;
+}
+
+@media (max-width: 991px) 
+.nav-menu {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    float: none;
+    width: 100%;
+    background: #fff;
+    overflow-y: hidden;
+    z-index: 999;
+}
+.nav-menu {
+    position: static;
+    float: right;
+}
+.navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.nav-menu ul.nav-menu-inner {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}

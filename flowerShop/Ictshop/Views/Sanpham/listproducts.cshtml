@@ -1,0 +1,51 @@
+﻿
+@using Ictshop.Models;
+@model IEnumerable<Sanpham>
+@{
+
+    Layout = "~/Views/Shared/layout.cshtml";
+
+}
+@*<div class="row">
+
+        @using (Html.BeginForm("Index", "Sanpham/listproducts", FormMethod.Get))
+        {
+            <p>
+                 @Html.TextBox("SearchString") <input type="submit" value="Search" />
+            </p>
+        }
+
+    <div>*@
+<div class="container body-content">
+    @foreach (var i in Model.GroupBy(n => n.Mahang).ToList())
+    {
+        <div>          
+            @foreach (var it in i)
+            {
+                //<div style="background-color: #dc359217 !important"><h3 style="padding-left:20px"> @it.Hangsanxuat.Tenhang</h3></div>
+                //<div style="display:inline-flex">
+                 
+                    <div class="col-md-3 col-sm-6">
+                        <h3 style="padding-left:20px"> @it.Hangsanxuat.Tenhang</h3>
+                        <a href="@Url.Action("xemchitiet", new { @Masp = it.Masp })">
+                            <img src="@Url.Content("~" + @it.Anhbia)" class="img-responsive" alt="" width="400" height="400" />
+                        </a>
+                        <center>
+                            <h3> @it.Tensp </h3>
+                            <h3 style="color:red">Price: @String.Format("{0:0,0}", @it.Giatien)$</h3>
+                            <br />
+                            @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = it.Masp, @strURL = Request.Url.ToString() }))
+                            {
+                                <input style="background-color:cornsilk;border-radius:5px; margin: 10px 10px 10px 10px;font-size:12px" type="submit" value="Order" id="bgnGioHang" />
+                            }
+                        </center>
+                    </div>                                      
+            }
+        </div>
+    }
+    </div>
+
+
+
+
+

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Ictshop.Models.Hedieuhanh>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Flower Management</h2>
+
+<p>
+    @Html.ActionLink("Create Flower", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Mdh
+        </th>
+        <th>
+            Flower Name 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mahdh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tenhdh)
+    </td>
+    <td>
+        <button class="btn btn-success">
+            @Html.ActionLink("Edit", "Edit", new { id = item.Mahdh}, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-primary">
+            @Html.ActionLink("Detail", "Details", new { id = item.Mahdh }, new { @style = "color:white;" })
+        </button>
+        <button class="btn btn-danger">
+            @Html.ActionLink("Delete", "Delete", new { id = item.Mahdh }, new { @style = "color:white;" })
+        </button>
+    </td>
+</tr>
+}
+
+</table>
